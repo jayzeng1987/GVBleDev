@@ -1,0 +1,59 @@
+//
+//  BleCentralManage.h
+//  GVObuSDK
+//
+//  Created by JayZ on 16/8/9.
+//  Copyright © 2016年 genvict. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <CoreBluetooth/CoreBluetooth.h>
+#import "GVDefine.h"
+
+
+typedef void(^BleStateBlock)(int status, NSString *description, NSObject *obj);
+typedef void(^ReadDataBlock)(NSData *data);
+
+@interface GVBleCentralManage : NSObject <CBCentralManagerDelegate, CBPeripheralDelegate>
+
+@property(nonatomic, copy)BleStateBlock bleStateBlock;
+@property(nonatomic, copy)ReadDataBlock readDataBlock;
+
+@property(nonatomic, strong)CBCentralManager *manager;
+@property(nonatomic, strong)CBPeripheral *foundPeripheral;
+@property(nonatomic, strong)CBPeripheral *activedPeripheral;
+
+#pragma mark - GVBleCentralManage对外接口
+
+#pragma mark 单例模式，获取实例对象
++(instancetype)shareInstance;
+
+#pragma mark 扫描设备
+-(void)startScanPeripheralWithId:(NSString *)identify withName:(NSString *)name scanType:(int)scanType connectType:(int)connectType timeout:(int)timeout;
+
+#pragma mark 停止扫描
+-(void)stopScanPeripheral;
+
+#pragma mark 连接设备
+-(void)connectPeripheral:(CBPeripheral*)peripheral;
+
+#pragma mark 断开当前连接
+-(void)disconnectCurrentPeripheral;
+
+#pragma mark 断开指定设备
+-(void)disconnectPeripheral:(CBPeripheral*)peripheral;
+
+#pragma mark 写数据
+-(void)writeData:(NSData *)data;
+
+#pragma mark 设置过滤条件
+-(void)setFilterList:(NSMutableArray*)filterList;
+
+#pragma mark 设置通讯协议
+-(void)setProtocol:(GVProtocolType)type;
+
+
+
+
+
+@end
