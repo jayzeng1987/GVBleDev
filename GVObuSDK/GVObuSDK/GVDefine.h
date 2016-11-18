@@ -31,6 +31,7 @@
 #define GEASY_BLUE_STATUS_CHARACTERISTIC_UUID                   @"FF09"
 
 
+//蓝牙设备状态
 typedef NS_ENUM(NSUInteger, GVBleState) {
     GVBleStateUnknown = 0,
     GVBleStateResetting,
@@ -44,18 +45,43 @@ typedef NS_ENUM(NSUInteger, GVBleState) {
     GVBleStateConnectSuccess,
     GVBleStateConnectFailed,
     GVBleStateConnectTimeout,
+    GVBleStateWriteDataSuccess,
     GVBleStateWriteDataFailed,
+    GVBleStateReadDataSuccess,
     GVBleStateReadDataFailed,
+    GVBleStateFindServiceSuccess,
     GVBleStateFindServiceFailed,
+    GVBleStateFindCharacteristicSuccess,
     GVBleStateFindCharacteristicFailed
 
 };
 
+//协议类型
 typedef NS_ENUM(NSUInteger, GVProtocolType) {
-    GVProtocolCommon = 0, //通用协议
-    GVProtocolEncry,  //采用加密芯片的协议，如果贵州地区
-    GVProtocolEncryWithWeChat, //采用加密芯片和支持微信protobuf的协议，如广东、贵州、山东等地区
+    GVProtocolCommon = 0,       //通用协议
+    GVProtocolEncry,            //采用加密芯片的协议，如果贵州地区
+    GVProtocolEncryWithWeChat,  //采用加密芯片和支持微信protobuf的协议，如广东、贵州、山东等地区
 };
 
+//蓝牙通讯方式
+typedef NS_ENUM(NSUInteger, GVBleCommType) {
+    GVBleCommIndicate = 0,  //采用Indicate方式
+    GVBleCommNotify,        //采用Notify方式
+};
+
+//搜索类型
+typedef NS_ENUM(NSInteger, GVBleScanType) {
+    GVBleScanWithDefault = 0,       //默认搜索类型，搜索到设备后根据设备名称、UUID或名称过滤列表进行设备连接
+    GVBleScanWithSearchOnly,        //只是搜索,不连接设备
+    GVBleScanWithSearchDelegate,    //搜索设备，触发面向用户的delegate
+};
+
+//接口返回的操作结果代码
+typedef NS_ENUM(NSInteger, GVResultCode) {
+    GVRCSuccess = 0,    //操作成功
+    GVRCScanFailed,     //搜索失败
+    GVRCScanTimeout,    //搜索超时
+    
+};
 
 #endif /* GVDefine_h */

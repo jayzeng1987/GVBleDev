@@ -22,6 +22,8 @@ typedef void(^ReadDataBlock)(NSData *data);
 @property(nonatomic, strong)CBCentralManager *manager;
 @property(nonatomic, strong)CBPeripheral *foundPeripheral;
 @property(nonatomic, strong)CBPeripheral *activedPeripheral;
+@property(nonatomic, strong)NSMutableArray *filterList; //过滤列表
+@property(nonatomic, assign)GVProtocolType protocolType; //协议类型
 
 #pragma mark - GVBleCentralManage对外接口
 
@@ -46,11 +48,6 @@ typedef void(^ReadDataBlock)(NSData *data);
 #pragma mark 写数据
 -(void)writeData:(NSData *)data;
 
-#pragma mark 设置过滤条件
--(void)setFilterList:(NSMutableArray*)filterList;
-
-#pragma mark 设置通讯协议
--(void)setProtocol:(GVProtocolType)type;
 
 
 

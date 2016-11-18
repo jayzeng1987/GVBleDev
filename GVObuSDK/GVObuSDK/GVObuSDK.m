@@ -10,4 +10,14 @@
 
 @implementation GVObuSDK
 
+//开始搜索蓝牙设备
+-(void)startScan:(obuCallBack)callBack timeout:(int)timeout{
+    
+}
+
+//结束搜索蓝牙设备
+- (void)stopScan{
+    
+}
+
 @end

@@ -19,28 +19,6 @@ static GVBleCentralManage * s_instance = nil;
 
 @implementation GVBleCentralManage
 
-+(instancetype)shareInstance{
-    
-    static dispatch_once_t onceToken ;
-    dispatch_once(&onceToken, ^{
-        s_instance = [[self alloc] init] ;
-    });
-    
-    return s_instance;
-}
-
--(id)init{
-    if(self = [super init]){
-        
-        //dispatch_queue_t centralQueue = dispatch_queue_create("com.genvict.mycentral", DISPATCH_QUEUE_SERIAL);
-        dispatch_queue_t centralQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-        self.manager = [[CBCentralManager alloc] initWithDelegate:self queue:centralQueue];
-    }
-    
-    return self;
-}
-
-
 #pragma mark - 实现CBCentralManagerDelegate代理
 -(void)centralManagerDidUpdateState:(CBCentralManager *)central{
     GVLog(@"centralManagerDidUpdateState");
@@ -88,7 +66,61 @@ static GVBleCentralManage * s_instance = nil;
     GVLog(@"didWriteValueForCharacteristic");
 }
 
+#pragma mark - GVBleCentralManage对外接口
 
+-(id)init{
+    if(self = [super init]){
+        
+        //dispatch_queue_t centralQueue = dispatch_queue_create("com.genvict.mycentral", DISPATCH_QUEUE_SERIAL);
+//        dispatch_queue_t centralQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//        self.manager = [[CBCentralManager alloc] initWithDelegate:self queue:centralQueue];
+        
+        self.manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+    }
+    
+    return self;
+}
+
+#pragma mark 单例模式，获取实例对象
++(instancetype)shareInstance{
+    
+    static dispatch_once_t onceToken ;
+    dispatch_once(&onceToken, ^{
+        s_instance = [[self alloc] init] ;
+    });
+    
+    return s_instance;
+}
+
+#pragma mark 扫描设备
+-(void)startScanPeripheralWithId:(NSString *)identify withName:(NSString *)name scanType:(int)scanType connectType:(int)connectType timeout:(int)timeout{
+    
+}
+
+#pragma mark 停止扫描
+-(void)stopScanPeripheral{
+    
+}
+
+#pragma mark 连接设备
+-(void)connectPeripheral:(CBPeripheral*)peripheral{
+    
+}
+
+#pragma mark 断开当前连接
+-(void)disconnectCurrentPeripheral{
+    
+}
+
+#pragma mark 断开指定设备
+-(void)disconnectPeripheral:(CBPeripheral*)peripheral{
+    
+}
+
+#pragma mark 写数据
+-(void)writeData:(NSData *)data{
+    
+}
 
 
 
