@@ -58,9 +58,8 @@ typedef NS_ENUM(NSUInteger, GVBleState) {
 
 //协议类型
 typedef NS_ENUM(NSUInteger, GVProtocolType) {
-    GVProtocolCommon = 0,       //通用协议
-    GVProtocolEncry,            //采用加密芯片的协议，如果贵州地区
-    GVProtocolEncryWithWeChat,  //采用加密芯片和支持微信protobuf的协议，如广东、贵州、山东等地区
+    PROTOCOL_GB = 0,           //国标协议
+    
 };
 
 //蓝牙通讯方式
@@ -83,5 +82,29 @@ typedef NS_ENUM(NSInteger, GVResultCode) {
     GVRCScanTimeout,    //搜索超时
     
 };
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+@interface GVObuResult : NSObject
+
+@property(nonatomic, assign) GVResultCode status;   //结果代码，0成功
+@property(nonatomic, assign) NSObject * data;       //执行某些操作时成功则返回相应的字典结构数据或是实体类
+@property(nonatomic, strong) NSString * desc;       //结果描述
+
+@end
+
+typedef void(^GVResultBlock)(GVObuResult *obuResult);
+
+
+
+
+
+
+
+
+
+
+
 
 #endif /* GVDefine_h */

@@ -10,12 +10,18 @@
 		E55B687F1D62F3EC005FCB81 /* GVObuSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E5A460271D59C12C00CAAD3A /* GVObuSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55B68801D62F3F4005FCB81 /* GVDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D13B8B1D61B56300AD68E3 /* GVDefine.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E55B68811D62F3F7005FCB81 /* GVBleCentralManage.h in Headers */ = {isa = PBXBuildFile; fileRef = E5A460351D59C30000CAAD3A /* GVBleCentralManage.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E581E0A71DE6726A000AD814 /* GVAbstractProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = E581E0A51DE6726A000AD814 /* GVAbstractProtocols.h */; };
+		E581E0A81DE6726A000AD814 /* GVAbstractProtocols.m in Sources */ = {isa = PBXBuildFile; fileRef = E581E0A61DE6726A000AD814 /* GVAbstractProtocols.m */; };
+		E581E0AB1DE67292000AD814 /* GVBleCtrlHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E581E0A91DE67292000AD814 /* GVBleCtrlHelper.h */; };
+		E581E0AC1DE67292000AD814 /* GVBleCtrlHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E581E0AA1DE67292000AD814 /* GVBleCtrlHelper.m */; };
+		E581E0B31DE67345000AD814 /* GVGBBleAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E581E0B11DE67345000AD814 /* GVGBBleAPI.h */; };
+		E581E0B41DE67345000AD814 /* GVGBBleAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E581E0B21DE67345000AD814 /* GVGBBleAPI.m */; };
+		E581E0B71DE674D3000AD814 /* GVGBProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = E581E0B51DE674D3000AD814 /* GVGBProtocol.h */; };
+		E581E0B81DE674D3000AD814 /* GVGBProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E581E0B61DE674D3000AD814 /* GVGBProtocol.m */; };
 		E5A460281D59C12C00CAAD3A /* GVObuSDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E5A460271D59C12C00CAAD3A /* GVObuSDK.h */; };
 		E5A4602A1D59C12C00CAAD3A /* GVObuSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A460291D59C12C00CAAD3A /* GVObuSDK.m */; };
 		E5A460371D59C30000CAAD3A /* GVBleCentralManage.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A460361D59C30000CAAD3A /* GVBleCentralManage.m */; };
 		E5A460391D59CB0900CAAD3A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A460381D59CB0900CAAD3A /* CoreBluetooth.framework */; };
-		E5D1DB061DD2C52500171CA6 /* GVResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D1DB041DD2C52500171CA6 /* GVResult.h */; };
-		E5D1DB071DD2C52500171CA6 /* GVResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D1DB051DD2C52500171CA6 /* GVResult.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +38,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E581E0A51DE6726A000AD814 /* GVAbstractProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVAbstractProtocols.h; sourceTree = "<group>"; };
+		E581E0A61DE6726A000AD814 /* GVAbstractProtocols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAbstractProtocols.m; sourceTree = "<group>"; };
+		E581E0A91DE67292000AD814 /* GVBleCtrlHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVBleCtrlHelper.h; sourceTree = "<group>"; };
+		E581E0AA1DE67292000AD814 /* GVBleCtrlHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVBleCtrlHelper.m; sourceTree = "<group>"; };
+		E581E0B11DE67345000AD814 /* GVGBBleAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVGBBleAPI.h; sourceTree = "<group>"; };
+		E581E0B21DE67345000AD814 /* GVGBBleAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVGBBleAPI.m; sourceTree = "<group>"; };
+		E581E0B51DE674D3000AD814 /* GVGBProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVGBProtocol.h; sourceTree = "<group>"; };
+		E581E0B61DE674D3000AD814 /* GVGBProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVGBProtocol.m; sourceTree = "<group>"; };
 		E5A460241D59C12C00CAAD3A /* libGVObuSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGVObuSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A460271D59C12C00CAAD3A /* GVObuSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVObuSDK.h; sourceTree = "<group>"; };
 		E5A460291D59C12C00CAAD3A /* GVObuSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVObuSDK.m; sourceTree = "<group>"; };
@@ -39,8 +53,6 @@
 		E5A460361D59C30000CAAD3A /* GVBleCentralManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVBleCentralManage.m; sourceTree = "<group>"; };
 		E5A460381D59CB0900CAAD3A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		E5D13B8B1D61B56300AD68E3 /* GVDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVDefine.h; sourceTree = "<group>"; };
-		E5D1DB041DD2C52500171CA6 /* GVResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVResult.h; sourceTree = "<group>"; };
-		E5D1DB051DD2C52500171CA6 /* GVResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVResult.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +92,14 @@
 				E5A460351D59C30000CAAD3A /* GVBleCentralManage.h */,
 				E5A460361D59C30000CAAD3A /* GVBleCentralManage.m */,
 				E5D13B8B1D61B56300AD68E3 /* GVDefine.h */,
-				E5D1DB041DD2C52500171CA6 /* GVResult.h */,
-				E5D1DB051DD2C52500171CA6 /* GVResult.m */,
+				E581E0A51DE6726A000AD814 /* GVAbstractProtocols.h */,
+				E581E0A61DE6726A000AD814 /* GVAbstractProtocols.m */,
+				E581E0A91DE67292000AD814 /* GVBleCtrlHelper.h */,
+				E581E0AA1DE67292000AD814 /* GVBleCtrlHelper.m */,
+				E581E0B11DE67345000AD814 /* GVGBBleAPI.h */,
+				E581E0B21DE67345000AD814 /* GVGBBleAPI.m */,
+				E581E0B51DE674D3000AD814 /* GVGBProtocol.h */,
+				E581E0B61DE674D3000AD814 /* GVGBProtocol.m */,
 			);
 			path = GVObuSDK;
 			sourceTree = "<group>";
@@ -93,10 +111,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5D1DB061DD2C52500171CA6 /* GVResult.h in Headers */,
 				E55B687F1D62F3EC005FCB81 /* GVObuSDK.h in Headers */,
+				E581E0A71DE6726A000AD814 /* GVAbstractProtocols.h in Headers */,
 				E55B68801D62F3F4005FCB81 /* GVDefine.h in Headers */,
 				E55B68811D62F3F7005FCB81 /* GVBleCentralManage.h in Headers */,
+				E581E0AB1DE67292000AD814 /* GVBleCtrlHelper.h in Headers */,
+				E581E0B71DE674D3000AD814 /* GVGBProtocol.h in Headers */,
+				E581E0B31DE67345000AD814 /* GVGBBleAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,9 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E581E0A81DE6726A000AD814 /* GVAbstractProtocols.m in Sources */,
+				E581E0AC1DE67292000AD814 /* GVBleCtrlHelper.m in Sources */,
 				E5A460371D59C30000CAAD3A /* GVBleCentralManage.m in Sources */,
+				E581E0B81DE674D3000AD814 /* GVGBProtocol.m in Sources */,
 				E5A4602A1D59C12C00CAAD3A /* GVObuSDK.m in Sources */,
-				E5D1DB071DD2C52500171CA6 /* GVResult.m in Sources */,
+				E581E0B41DE67345000AD814 /* GVGBBleAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

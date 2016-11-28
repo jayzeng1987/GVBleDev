@@ -24,6 +24,7 @@ typedef void(^ReadDataBlock)(NSData *data);
 @property(nonatomic, strong)CBPeripheral *activedPeripheral;
 @property(nonatomic, strong)NSMutableArray *filterList; //过滤列表
 @property(nonatomic, assign)GVProtocolType protocolType; //协议类型
+@property(nonatomic, assign)GVBleCommType commType; //通讯方式
 
 #pragma mark - GVBleCentralManage对外接口
 
