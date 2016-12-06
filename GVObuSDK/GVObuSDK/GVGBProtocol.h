@@ -12,6 +12,7 @@
 
 @interface GVGBProtocol : GVAbstractProtocols
 
--(id)init;
+-(void)switchBleCommType:(GVBleCommType)type callback:(GVResultBlock)resultBlock;
+-(void)transmit:(NSData *)data callback:(GVResultBlock)resultBlock;
 
 @end

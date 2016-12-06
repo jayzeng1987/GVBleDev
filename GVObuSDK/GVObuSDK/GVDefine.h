@@ -30,6 +30,8 @@
 #define GEASY_BLUE_READ_CHARACTERISTIC_UUID                     @"FEC8"
 #define GEASY_BLUE_STATUS_CHARACTERISTIC_UUID                   @"FF09"
 
+//定义字节类型
+typedef unsigned char byte;
 
 //蓝牙设备状态
 typedef NS_ENUM(NSUInteger, GVBleState) {
@@ -68,6 +70,12 @@ typedef NS_ENUM(NSUInteger, GVBleCommType) {
     GVBleCommNotify,        //采用Notify方式
 };
 
+//通讯帧类型
+typedef NS_ENUM(NSUInteger, GVGBFrameType) {
+    GVGBDataFrame = 0,  //国标数据帧
+    GVGBCtrlFrame,      //国标控制帧
+};
+
 //搜索类型
 typedef NS_ENUM(NSInteger, GVBleScanType) {
     GVBleScanWithDefault = 0,       //默认搜索类型，搜索到设备后根据设备名称、UUID或名称过滤列表进行设备连接
@@ -80,31 +88,8 @@ typedef NS_ENUM(NSInteger, GVResultCode) {
     GVRCSuccess = 0,    //操作成功
     GVRCScanFailed,     //搜索失败
     GVRCScanTimeout,    //搜索超时
+    GVObjectIsNull,     //对象为空
     
 };
-
-////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////
-
-@interface GVObuResult : NSObject
-
-@property(nonatomic, assign) GVResultCode status;   //结果代码，0成功
-@property(nonatomic, assign) NSObject * data;       //执行某些操作时成功则返回相应的字典结构数据或是实体类
-@property(nonatomic, strong) NSString * desc;       //结果描述
-
-@end
-
-typedef void(^GVResultBlock)(GVObuResult *obuResult);
-
-
-
-
-
-
-
-
-
-
-
 
 #endif /* GVDefine_h */

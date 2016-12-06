@@ -7,16 +7,34 @@
 //
 
 #import "GVGBProtocol.h"
+#import "GVGBTransmitStrategy.h"
+#import "GVGBIndicationStrategy.h"
+#import "GVGBNotificationStrategy.h"
+
+@interface GVGBProtocol()
+
+@property (nonatomic, assign) GVBleCommType bleCommType;
+@property (nonatomic, strong) GVGBTransmitStrategy * transmitStrategy;
+
+@end
 
 @implementation GVGBProtocol
 
 -(id)init{
     self = [super init];
     if (self) {
-        return self;
+        self.transmitStrategy = [GVGBIndicationStrategy]
     }
     
-    return nil;
+    return self;
+}
+
+-(void)switchBleCommType:(GVBleCommType)type callback:(GVResultBlock)resultBlock{
+    
+}
+
+-(void)transmit:(NSData *)data callback:(GVResultBlock)resultBlock{
+    
 }
 
 @end

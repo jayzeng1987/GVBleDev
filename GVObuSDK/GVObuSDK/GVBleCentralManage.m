@@ -8,8 +8,6 @@
 
 #import "GVBleCentralManage.h"
 
-static GVBleCentralManage * s_instance = nil;
-
 @interface GVBleCentralManage () {
     NSMutableArray * _filterList;
     GVProtocolType _protocolType;
@@ -67,29 +65,27 @@ static GVBleCentralManage * s_instance = nil;
 }
 
 #pragma mark - GVBleCentralManage对外接口
-
--(id)init{
-    if(self = [super init]){
-        
-        //dispatch_queue_t centralQueue = dispatch_queue_create("com.genvict.mycentral", DISPATCH_QUEUE_SERIAL);
-//        dispatch_queue_t centralQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-//        self.manager = [[CBCentralManager alloc] initWithDelegate:self queue:centralQueue];
-        
-        self.manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
-    }
-    
-    return self;
-}
-
 #pragma mark 单例模式，获取实例对象
+static GVBleCentralManage * instance = nil;
 +(instancetype)shareInstance{
-    
-    static dispatch_once_t onceToken ;
+    static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        s_instance = [[self alloc] init] ;
+        instance = [[[self class] alloc] init];
+        //所有的属性必须放在这里初始化
+        instance.manager = [[CBCentralManager alloc] initWithDelegate:instance queue:nil];
+        
     });
     
-    return s_instance;
+    return instance;
+}
+
++(instancetype)allocWithZone:(struct _NSZone *)zone{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [super allocWithZone:zone];
+    });
+    
+    return instance;
 }
 
 #pragma mark 扫描设备

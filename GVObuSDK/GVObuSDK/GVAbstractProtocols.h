@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GVDefine.h"
+#import "GVObuResult.h"
 
 
 @interface GVAbstractProtocols : NSObject
 
 -(void) testAPI;
-
+-(void)switchBleCommType:(GVBleCommType)type callback:(GVResultBlock)resultBlock;
+-(void)transmit:(NSData *)data callback:(GVResultBlock)resultBlock;
 
 
 @end
