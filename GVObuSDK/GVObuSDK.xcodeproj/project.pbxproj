@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51DE438A1DF85BD400B50F8A /* GVObuResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE43891DF85BD400B50F8A /* GVObuResult.m */; };
 		E55B687F1D62F3EC005FCB81 /* GVObuSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E5A460271D59C12C00CAAD3A /* GVObuSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55B68801D62F3F4005FCB81 /* GVDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D13B8B1D61B56300AD68E3 /* GVDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55B68811D62F3F7005FCB81 /* GVBleCentralManage.h in Headers */ = {isa = PBXBuildFile; fileRef = E5A460351D59C30000CAAD3A /* GVBleCentralManage.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -57,6 +58,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		51DE43891DF85BD400B50F8A /* GVObuResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVObuResult.m; sourceTree = "<group>"; };
 		E55DC33F1DF6634C003CB33A /* GVObuSDKDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVObuSDKDelegate.h; sourceTree = "<group>"; };
 		E55DC3431DF663FB003CB33A /* GVBleDev.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVBleDev.h; sourceTree = "<group>"; };
 		E55DC3471DF66B64003CB33A /* GVObuResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVObuResult.h; sourceTree = "<group>"; };
@@ -121,34 +123,35 @@
 		E5A460261D59C12C00CAAD3A /* GVObuSDK */ = {
 			isa = PBXGroup;
 			children = (
-				E5A460271D59C12C00CAAD3A /* GVObuSDK.h */,
-				E5A460291D59C12C00CAAD3A /* GVObuSDK.m */,
-				E5A460351D59C30000CAAD3A /* GVBleCentralManage.h */,
-				E5A460361D59C30000CAAD3A /* GVBleCentralManage.m */,
-				E5D13B8B1D61B56300AD68E3 /* GVDefine.h */,
 				E581E0A51DE6726A000AD814 /* GVAbstractProtocols.h */,
 				E581E0A61DE6726A000AD814 /* GVAbstractProtocols.m */,
-				E581E0B51DE674D3000AD814 /* GVGBProtocol.h */,
-				E581E0B61DE674D3000AD814 /* GVGBProtocol.m */,
-				E55DC33F1DF6634C003CB33A /* GVObuSDKDelegate.h */,
+				E5A460351D59C30000CAAD3A /* GVBleCentralManage.h */,
+				E5A460361D59C30000CAAD3A /* GVBleCentralManage.m */,
 				E55DC3431DF663FB003CB33A /* GVBleDev.h */,
-				E55DC3471DF66B64003CB33A /* GVObuResult.h */,
-				E55DC34B1DF6880A003CB33A /* GVGBBleDevAPI.h */,
-				E55DC34C1DF6880A003CB33A /* GVGBBleDevAPI.m */,
 				E55DC3521DF69E35003CB33A /* GVBleDevCtrl.h */,
 				E55DC3531DF69E35003CB33A /* GVBleDevCtrl.m */,
-				E55DC3561DF6AEB7003CB33A /* GVGBTransmitStrategy.h */,
-				E55DC3571DF6AEB7003CB33A /* GVGBTransmitStrategy.m */,
+				E5D13B8B1D61B56300AD68E3 /* GVDefine.h */,
+				E55DC34B1DF6880A003CB33A /* GVGBBleDevAPI.h */,
+				E55DC34C1DF6880A003CB33A /* GVGBBleDevAPI.m */,
+				E55DC3621DF6B498003CB33A /* GVGBFrame.h */,
+				E55DC3631DF6B498003CB33A /* GVGBFrame.m */,
 				E55DC35A1DF6AFFB003CB33A /* GVGBIndicationStrategy.h */,
 				E55DC35B1DF6AFFB003CB33A /* GVGBIndicationStrategy.m */,
 				E55DC35E1DF6B018003CB33A /* GVGBNotificationStrategy.h */,
 				E55DC35F1DF6B018003CB33A /* GVGBNotificationStrategy.m */,
-				E55DC3621DF6B498003CB33A /* GVGBFrame.h */,
-				E55DC3631DF6B498003CB33A /* GVGBFrame.m */,
-				E55DC3661DF6BC4D003CB33A /* GVWeChatFrame.h */,
-				E55DC3671DF6BC4D003CB33A /* GVWeChatFrame.m */,
+				E581E0B51DE674D3000AD814 /* GVGBProtocol.h */,
+				E581E0B61DE674D3000AD814 /* GVGBProtocol.m */,
+				E55DC3561DF6AEB7003CB33A /* GVGBTransmitStrategy.h */,
+				E55DC3571DF6AEB7003CB33A /* GVGBTransmitStrategy.m */,
+				E55DC3471DF66B64003CB33A /* GVObuResult.h */,
+				51DE43891DF85BD400B50F8A /* GVObuResult.m */,
+				E5A460271D59C12C00CAAD3A /* GVObuSDK.h */,
+				E5A460291D59C12C00CAAD3A /* GVObuSDK.m */,
+				E55DC33F1DF6634C003CB33A /* GVObuSDKDelegate.h */,
 				E56D3A531DF7923D00C5974F /* GVProtocolsFactory.h */,
 				E56D3A541DF7923D00C5974F /* GVProtocolsFactory.m */,
+				E55DC3661DF6BC4D003CB33A /* GVWeChatFrame.h */,
+				E55DC3671DF6BC4D003CB33A /* GVWeChatFrame.m */,
 			);
 			path = GVObuSDK;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				E55DC3611DF6B018003CB33A /* GVGBNotificationStrategy.m in Sources */,
 				E55DC3591DF6AEB7003CB33A /* GVGBTransmitStrategy.m in Sources */,
 				E581E0B81DE674D3000AD814 /* GVGBProtocol.m in Sources */,
+				51DE438A1DF85BD400B50F8A /* GVObuResult.m in Sources */,
 				E55DC34E1DF6880A003CB33A /* GVGBBleDevAPI.m in Sources */,
 				E55DC3691DF6BC4D003CB33A /* GVWeChatFrame.m in Sources */,
 				E5A4602A1D59C12C00CAAD3A /* GVObuSDK.m in Sources */,

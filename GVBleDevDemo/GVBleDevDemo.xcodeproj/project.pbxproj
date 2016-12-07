@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51DE42251DF842C600B50F8A /* libGVObuSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E56D3A5B1DF7F79C00C5974F /* libGVObuSDK.a */; };
 		E55B683D1D62F235005FCB81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E55B683C1D62F235005FCB81 /* main.m */; };
 		E55B68401D62F235005FCB81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E55B683F1D62F235005FCB81 /* AppDelegate.m */; };
 		E55B68431D62F235005FCB81 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E55B68421D62F235005FCB81 /* ViewController.m */; };
@@ -15,7 +16,6 @@
 		E55B684B1D62F235005FCB81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E55B68491D62F235005FCB81 /* LaunchScreen.storyboard */; };
 		E55B68561D62F235005FCB81 /* GVBleDevDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E55B68551D62F235005FCB81 /* GVBleDevDemoTests.m */; };
 		E55B68611D62F235005FCB81 /* GVBleDevDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E55B68601D62F235005FCB81 /* GVBleDevDemoUITests.m */; };
-		E56D3A6A1DF8073900C5974F /* libGVObuSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E56D3A601DF7FC5400C5974F /* libGVObuSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51DE416C1DF83D3100B50F8A /* libGVObuSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGVObuSDK.a; path = libGVObuSDK/libGVObuSDK.a; sourceTree = "<group>"; };
 		E55B68381D62F235005FCB81 /* GVBleDevDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GVBleDevDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55B683C1D62F235005FCB81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E55B683E1D62F235005FCB81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E56D3A6A1DF8073900C5974F /* libGVObuSDK.a in Frameworks */,
+				51DE42251DF842C600B50F8A /* libGVObuSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +151,7 @@
 		E56D3A5A1DF7F79C00C5974F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				51DE416C1DF83D3100B50F8A /* libGVObuSDK.a */,
 				E56D3A661DF7FEFB00C5974F /* libGVObuSDK.a */,
 				E56D3A601DF7FC5400C5974F /* libGVObuSDK.a */,
 				E56D3A5E1DF7FA7900C5974F /* libGVObuSDK.a */,
@@ -386,13 +388,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 			};
 			name = Debug;
 		};
@@ -429,13 +432,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -447,6 +451,10 @@
 				DEVELOPMENT_TEAM = TFACG9W7NW;
 				INFOPLIST_FILE = GVBleDevDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libGVObuSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.genvice.jayz.GVBleDevDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -459,6 +467,10 @@
 				DEVELOPMENT_TEAM = TFACG9W7NW;
 				INFOPLIST_FILE = GVBleDevDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libGVObuSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.genvice.jayz.GVBleDevDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
