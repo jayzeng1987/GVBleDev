@@ -22,26 +22,26 @@ static NSString * s_sdkVersion = @"V1.0.0";
 @implementation GVObuSDK
 
 //获取SDK单例实例
-static GVObuSDK * instance = nil;
+static GVObuSDK * s_instance = nil;
 +(instancetype)sharedObuSDK{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[[self class] alloc] init];
+        s_instance = [[[self class] alloc] init];
         //所有的属性必须放在这里初始化
-        instance.gvGBBleAPI = [[GVGBBleDevAPI alloc]init];
+        s_instance.gvGBBleAPI = [[GVGBBleDevAPI alloc]init];
         
     });
     
-    return instance;
+    return s_instance;
 }
 
 +(instancetype)allocWithZone:(struct _NSZone *)zone{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [super allocWithZone:zone];
+        s_instance = [super allocWithZone:zone];
     });
     
-    return instance;
+    return s_instance;
 }
 
 //获取SDK版本信息
@@ -52,12 +52,23 @@ static GVObuSDK * instance = nil;
 //设置代理
 -(void)setObuSDKDelegate:(id)object{
     self.gvObuSDKDelegate = object;
+    
+    if (self.gvGBBleAPI != nil) {
+        [self.gvGBBleAPI setObuSDKDelegate:object];
+    }
 }
 
 //设置协议类型
--(void)setProtocolType:(GVProtocolType)type{
+-(void)setProtocolType:(GVProtocolType)type callback:(GVResultBlock)resultBlock{
     if (self.gvGBBleAPI != nil) {
-        [self.gvGBBleAPI setProtocolType:type];
+        [self.gvGBBleAPI setProtocolType:type callback:resultBlock];
+    }else if(resultBlock != nil) {
+        GVObuResult * result = [[GVObuResult alloc]init];
+        result.status = GVObjectIsNull;
+        result.data = nil;
+        result.desc = @"对象为空";
+        
+        resultBlock(result);
     }
 }
 
@@ -95,7 +106,7 @@ static GVObuSDK * instance = nil;
 -(void)startScanDevice:(int)timeout callback:(GVResultBlock)resultBlock{
     if (self.gvGBBleAPI != nil) {
         [self.gvGBBleAPI startScanDevice:timeout callback:resultBlock];
-    }else{
+    }else if(resultBlock != nil){
         GVObuResult * result = [[GVObuResult alloc]init];
         result.status = GVObjectIsNull;
         result.data = nil;

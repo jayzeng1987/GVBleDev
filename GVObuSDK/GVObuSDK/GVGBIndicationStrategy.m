@@ -14,6 +14,7 @@
 @property (nonatomic, strong) GVResultBlock resultBlock;
 @property (nonatomic, strong) GVBleCentralManage * bleCentralManage;
 @property (nonatomic, assign) int maxFrameLength; //最大帧长度
+@property (nonatomic, assign) int blePackageLength; //发送包长度
 @property (nonatomic, assign) Boolean useWeChat; //是否使用微信ProtocolBuf协议
 @property (nonatomic, assign) Boolean hasRspACK; //发送数据后是否收到应答
 @property (nonatomic, assign) int rspACKTimeout; //数据发送后等待接收端应答ACK响应超时时间
@@ -32,7 +33,9 @@ static GVGBIndicationStrategy * s_instance = nil;
     dispatch_once(&onceToken, ^{
         s_instance = [[[self class] alloc] init];
         //所有的属性必须放在这里初始化
-        
+        s_instance.bleCentralManage = [GVBleCentralManage shareInstance];
+        s_instance.maxFrameLength = 100; //默认100字节，5字节帧头帧尾 + 95字节data
+        s_instance.blePackageLength = 20; //蓝牙分包发送长度
         
     });
     
@@ -57,7 +60,9 @@ static GVGBIndicationStrategy * s_instance = nil;
 }
 
 -(void)setBleCommType:(GVBleCommType)type{
-    
+    if (self.bleCentralManage != nil) {
+        [self.bleCentralManage setCommType:type];
+    }
 }
 
 -(void)splitPackage:(NSData *)data callback:(GVResultBlock) resultBlock{

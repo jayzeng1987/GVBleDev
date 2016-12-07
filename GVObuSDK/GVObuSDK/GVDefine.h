@@ -30,8 +30,6 @@
 #define GEASY_BLUE_READ_CHARACTERISTIC_UUID                     @"FEC8"
 #define GEASY_BLUE_STATUS_CHARACTERISTIC_UUID                   @"FF09"
 
-//定义字节类型
-typedef unsigned char byte;
 
 //蓝牙设备状态
 typedef NS_ENUM(NSUInteger, GVBleState) {
@@ -85,10 +83,13 @@ typedef NS_ENUM(NSInteger, GVBleScanType) {
 
 //接口返回的操作结果代码
 typedef NS_ENUM(NSInteger, GVResultCode) {
-    GVRCSuccess = 0,    //操作成功
-    GVRCScanFailed,     //搜索失败
-    GVRCScanTimeout,    //搜索超时
-    GVObjectIsNull,     //对象为空
+    GVRCSuccess = 0,        //操作成功
+    GVRCScanFailed,         //搜索失败
+    GVRCScanTimeout,        //搜索超时
+    GVObjectIsNull,         //对象为空
+    GVObjectCreateFailed,   //对象创建失败
+    GVParamsError,          //接口参数错误
+    
     
 };
 

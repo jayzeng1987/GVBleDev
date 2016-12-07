@@ -8,30 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		E55B687F1D62F3EC005FCB81 /* GVObuSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E5A460271D59C12C00CAAD3A /* GVObuSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E55B68801D62F3F4005FCB81 /* GVDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D13B8B1D61B56300AD68E3 /* GVDefine.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E55B68811D62F3F7005FCB81 /* GVBleCentralManage.h in Headers */ = {isa = PBXBuildFile; fileRef = E5A460351D59C30000CAAD3A /* GVBleCentralManage.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E55DC3411DF6634C003CB33A /* GVObuSDKDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC33F1DF6634C003CB33A /* GVObuSDKDelegate.h */; };
-		E55DC3451DF663FB003CB33A /* GVBleDev.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC3431DF663FB003CB33A /* GVBleDev.h */; };
-		E55DC3491DF66B64003CB33A /* GVObuResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC3471DF66B64003CB33A /* GVObuResult.h */; };
-		E55DC34D1DF6880A003CB33A /* GVGBBleDevAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC34B1DF6880A003CB33A /* GVGBBleDevAPI.h */; };
+		E55B68801D62F3F4005FCB81 /* GVDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D13B8B1D61B56300AD68E3 /* GVDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E55B68811D62F3F7005FCB81 /* GVBleCentralManage.h in Headers */ = {isa = PBXBuildFile; fileRef = E5A460351D59C30000CAAD3A /* GVBleCentralManage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E55DC3411DF6634C003CB33A /* GVObuSDKDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC33F1DF6634C003CB33A /* GVObuSDKDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E55DC3451DF663FB003CB33A /* GVBleDev.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC3431DF663FB003CB33A /* GVBleDev.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E55DC3491DF66B64003CB33A /* GVObuResult.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC3471DF66B64003CB33A /* GVObuResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E55DC34D1DF6880A003CB33A /* GVGBBleDevAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC34B1DF6880A003CB33A /* GVGBBleDevAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55DC34E1DF6880A003CB33A /* GVGBBleDevAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E55DC34C1DF6880A003CB33A /* GVGBBleDevAPI.m */; };
-		E55DC3541DF69E35003CB33A /* GVBleDevCtrl.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC3521DF69E35003CB33A /* GVBleDevCtrl.h */; };
+		E55DC3541DF69E35003CB33A /* GVBleDevCtrl.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC3521DF69E35003CB33A /* GVBleDevCtrl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55DC3551DF69E35003CB33A /* GVBleDevCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = E55DC3531DF69E35003CB33A /* GVBleDevCtrl.m */; };
-		E55DC3581DF6AEB7003CB33A /* GVGBTransmitStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC3561DF6AEB7003CB33A /* GVGBTransmitStrategy.h */; };
+		E55DC3581DF6AEB7003CB33A /* GVGBTransmitStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC3561DF6AEB7003CB33A /* GVGBTransmitStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55DC3591DF6AEB7003CB33A /* GVGBTransmitStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = E55DC3571DF6AEB7003CB33A /* GVGBTransmitStrategy.m */; };
-		E55DC35C1DF6AFFB003CB33A /* GVGBIndicationStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC35A1DF6AFFB003CB33A /* GVGBIndicationStrategy.h */; };
+		E55DC35C1DF6AFFB003CB33A /* GVGBIndicationStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC35A1DF6AFFB003CB33A /* GVGBIndicationStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55DC35D1DF6AFFB003CB33A /* GVGBIndicationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = E55DC35B1DF6AFFB003CB33A /* GVGBIndicationStrategy.m */; };
-		E55DC3601DF6B018003CB33A /* GVGBNotificationStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC35E1DF6B018003CB33A /* GVGBNotificationStrategy.h */; };
+		E55DC3601DF6B018003CB33A /* GVGBNotificationStrategy.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC35E1DF6B018003CB33A /* GVGBNotificationStrategy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55DC3611DF6B018003CB33A /* GVGBNotificationStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = E55DC35F1DF6B018003CB33A /* GVGBNotificationStrategy.m */; };
-		E55DC3641DF6B498003CB33A /* GVGBFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC3621DF6B498003CB33A /* GVGBFrame.h */; };
+		E55DC3641DF6B498003CB33A /* GVGBFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC3621DF6B498003CB33A /* GVGBFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55DC3651DF6B498003CB33A /* GVGBFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E55DC3631DF6B498003CB33A /* GVGBFrame.m */; };
-		E55DC3681DF6BC4D003CB33A /* GVWeChatFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC3661DF6BC4D003CB33A /* GVWeChatFrame.h */; };
+		E55DC3681DF6BC4D003CB33A /* GVWeChatFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = E55DC3661DF6BC4D003CB33A /* GVWeChatFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E55DC3691DF6BC4D003CB33A /* GVWeChatFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = E55DC3671DF6BC4D003CB33A /* GVWeChatFrame.m */; };
-		E581E0A71DE6726A000AD814 /* GVAbstractProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = E581E0A51DE6726A000AD814 /* GVAbstractProtocols.h */; };
+		E56D3A551DF7923D00C5974F /* GVProtocolsFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = E56D3A531DF7923D00C5974F /* GVProtocolsFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E56D3A561DF7923D00C5974F /* GVProtocolsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E56D3A541DF7923D00C5974F /* GVProtocolsFactory.m */; };
+		E56D3A581DF7F2F300C5974F /* GVObuResult.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E55DC3471DF66B64003CB33A /* GVObuResult.h */; };
+		E56D3A591DF7F2F700C5974F /* GVDefine.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E5D13B8B1D61B56300AD68E3 /* GVDefine.h */; };
+		E581E0A71DE6726A000AD814 /* GVAbstractProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = E581E0A51DE6726A000AD814 /* GVAbstractProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E581E0A81DE6726A000AD814 /* GVAbstractProtocols.m in Sources */ = {isa = PBXBuildFile; fileRef = E581E0A61DE6726A000AD814 /* GVAbstractProtocols.m */; };
-		E581E0AB1DE67292000AD814 /* GVBleCtrlHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E581E0A91DE67292000AD814 /* GVBleCtrlHelper.h */; };
-		E581E0AC1DE67292000AD814 /* GVBleCtrlHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E581E0AA1DE67292000AD814 /* GVBleCtrlHelper.m */; };
-		E581E0B71DE674D3000AD814 /* GVGBProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = E581E0B51DE674D3000AD814 /* GVGBProtocol.h */; };
+		E581E0B71DE674D3000AD814 /* GVGBProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = E581E0B51DE674D3000AD814 /* GVGBProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E581E0B81DE674D3000AD814 /* GVGBProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E581E0B61DE674D3000AD814 /* GVGBProtocol.m */; };
 		E5A460281D59C12C00CAAD3A /* GVObuSDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E5A460271D59C12C00CAAD3A /* GVObuSDK.h */; };
 		E5A4602A1D59C12C00CAAD3A /* GVObuSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A460291D59C12C00CAAD3A /* GVObuSDK.m */; };
@@ -47,6 +49,8 @@
 			dstSubfolderSpec = 16;
 			files = (
 				E5A460281D59C12C00CAAD3A /* GVObuSDK.h in CopyFiles */,
+				E56D3A581DF7F2F300C5974F /* GVObuResult.h in CopyFiles */,
+				E56D3A591DF7F2F700C5974F /* GVDefine.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,10 +74,10 @@
 		E55DC3631DF6B498003CB33A /* GVGBFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVGBFrame.m; sourceTree = "<group>"; };
 		E55DC3661DF6BC4D003CB33A /* GVWeChatFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVWeChatFrame.h; sourceTree = "<group>"; };
 		E55DC3671DF6BC4D003CB33A /* GVWeChatFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVWeChatFrame.m; sourceTree = "<group>"; };
+		E56D3A531DF7923D00C5974F /* GVProtocolsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVProtocolsFactory.h; sourceTree = "<group>"; };
+		E56D3A541DF7923D00C5974F /* GVProtocolsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVProtocolsFactory.m; sourceTree = "<group>"; };
 		E581E0A51DE6726A000AD814 /* GVAbstractProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVAbstractProtocols.h; sourceTree = "<group>"; };
 		E581E0A61DE6726A000AD814 /* GVAbstractProtocols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVAbstractProtocols.m; sourceTree = "<group>"; };
-		E581E0A91DE67292000AD814 /* GVBleCtrlHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVBleCtrlHelper.h; sourceTree = "<group>"; };
-		E581E0AA1DE67292000AD814 /* GVBleCtrlHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVBleCtrlHelper.m; sourceTree = "<group>"; };
 		E581E0B51DE674D3000AD814 /* GVGBProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVGBProtocol.h; sourceTree = "<group>"; };
 		E581E0B61DE674D3000AD814 /* GVGBProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVGBProtocol.m; sourceTree = "<group>"; };
 		E5A460241D59C12C00CAAD3A /* libGVObuSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGVObuSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,8 +128,6 @@
 				E5D13B8B1D61B56300AD68E3 /* GVDefine.h */,
 				E581E0A51DE6726A000AD814 /* GVAbstractProtocols.h */,
 				E581E0A61DE6726A000AD814 /* GVAbstractProtocols.m */,
-				E581E0A91DE67292000AD814 /* GVBleCtrlHelper.h */,
-				E581E0AA1DE67292000AD814 /* GVBleCtrlHelper.m */,
 				E581E0B51DE674D3000AD814 /* GVGBProtocol.h */,
 				E581E0B61DE674D3000AD814 /* GVGBProtocol.m */,
 				E55DC33F1DF6634C003CB33A /* GVObuSDKDelegate.h */,
@@ -145,6 +147,8 @@
 				E55DC3631DF6B498003CB33A /* GVGBFrame.m */,
 				E55DC3661DF6BC4D003CB33A /* GVWeChatFrame.h */,
 				E55DC3671DF6BC4D003CB33A /* GVWeChatFrame.m */,
+				E56D3A531DF7923D00C5974F /* GVProtocolsFactory.h */,
+				E56D3A541DF7923D00C5974F /* GVProtocolsFactory.m */,
 			);
 			path = GVObuSDK;
 			sourceTree = "<group>";
@@ -156,22 +160,22 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E55B68801D62F3F4005FCB81 /* GVDefine.h in Headers */,
+				E55DC3491DF66B64003CB33A /* GVObuResult.h in Headers */,
 				E55DC3641DF6B498003CB33A /* GVGBFrame.h in Headers */,
 				E55DC35C1DF6AFFB003CB33A /* GVGBIndicationStrategy.h in Headers */,
+				E55B68811D62F3F7005FCB81 /* GVBleCentralManage.h in Headers */,
 				E55DC3411DF6634C003CB33A /* GVObuSDKDelegate.h in Headers */,
-				E55B687F1D62F3EC005FCB81 /* GVObuSDK.h in Headers */,
+				E56D3A551DF7923D00C5974F /* GVProtocolsFactory.h in Headers */,
 				E581E0A71DE6726A000AD814 /* GVAbstractProtocols.h in Headers */,
 				E55DC3541DF69E35003CB33A /* GVBleDevCtrl.h in Headers */,
-				E55B68801D62F3F4005FCB81 /* GVDefine.h in Headers */,
 				E55DC3451DF663FB003CB33A /* GVBleDev.h in Headers */,
 				E55DC34D1DF6880A003CB33A /* GVGBBleDevAPI.h in Headers */,
 				E55DC3681DF6BC4D003CB33A /* GVWeChatFrame.h in Headers */,
 				E55DC3581DF6AEB7003CB33A /* GVGBTransmitStrategy.h in Headers */,
-				E55B68811D62F3F7005FCB81 /* GVBleCentralManage.h in Headers */,
 				E55DC3601DF6B018003CB33A /* GVGBNotificationStrategy.h in Headers */,
-				E581E0AB1DE67292000AD814 /* GVBleCtrlHelper.h in Headers */,
-				E55DC3491DF66B64003CB33A /* GVObuResult.h in Headers */,
 				E581E0B71DE674D3000AD814 /* GVGBProtocol.h in Headers */,
+				E55B687F1D62F3EC005FCB81 /* GVObuSDK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +207,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = GV;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = genvict;
 				TargetAttributes = {
 					E5A460231D59C12C00CAAD3A = {
@@ -236,9 +240,9 @@
 				E581E0A81DE6726A000AD814 /* GVAbstractProtocols.m in Sources */,
 				E55DC3651DF6B498003CB33A /* GVGBFrame.m in Sources */,
 				E55DC3551DF69E35003CB33A /* GVBleDevCtrl.m in Sources */,
-				E581E0AC1DE67292000AD814 /* GVBleCtrlHelper.m in Sources */,
 				E5A460371D59C30000CAAD3A /* GVBleCentralManage.m in Sources */,
 				E55DC35D1DF6AFFB003CB33A /* GVGBIndicationStrategy.m in Sources */,
+				E56D3A561DF7923D00C5974F /* GVProtocolsFactory.m in Sources */,
 				E55DC3611DF6B018003CB33A /* GVGBNotificationStrategy.m in Sources */,
 				E55DC3591DF6AEB7003CB33A /* GVGBTransmitStrategy.m in Sources */,
 				E581E0B81DE674D3000AD814 /* GVGBProtocol.m in Sources */,
@@ -265,8 +269,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -309,8 +315,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -328,6 +336,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -336,6 +345,7 @@
 		E5A4602E1D59C12C00CAAD3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -345,6 +355,7 @@
 		E5A4602F1D59C12C00CAAD3A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

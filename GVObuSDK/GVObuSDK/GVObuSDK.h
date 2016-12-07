@@ -14,7 +14,7 @@
 +(instancetype)sharedObuSDK; //获取SDK单例实例
 -(NSString *)getSDKVersion; //获取SDK版本信息
 -(void)setObuSDKDelegate:(id)object; //设置代理
--(void)setProtocolType:(GVProtocolType)type; //设置协议类型
+-(void)setProtocolType:(GVProtocolType)type callback:(GVResultBlock)resultBlock; //设置协议类型
 -(Boolean)isEnabledBluetooth; //判断蓝牙是否打开
 -(Boolean)checkConnection; //检查设备连接状态
 -(Boolean)bindDev:(NSString *)uuid; //绑定设备

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "GVDefine.h"
+#import "GVObuSDKDelegate.h"
 
 
 typedef void(^BleStateBlock)(int status, NSString *description, NSObject *obj);
@@ -30,6 +31,9 @@ typedef void(^ReadDataBlock)(NSData *data);
 
 #pragma mark 单例模式，获取实例对象
 +(instancetype)shareInstance;
+
+#pragma mark 设置代理
+-(void)setObuSDKDelegate:(id)object;
 
 #pragma mark 扫描设备
 -(void)startScanPeripheralWithId:(NSString *)identify withName:(NSString *)name scanType:(int)scanType connectType:(int)connectType timeout:(int)timeout;

@@ -7,40 +7,49 @@
 //
 
 #import "GVBleDevCtrl.h"
+#import "GVBleCentralManage.h"
+
+@interface GVBleDevCtrl()
+
+@property (nonatomic, strong) GVBleCentralManage * gvBleCentralManage;
+
+@end
 
 @implementation GVBleDevCtrl
 
 -(id)init{
     if(self = [super init]){
-        return self;
+        self.gvBleCentralManage = [GVBleCentralManage shareInstance];
     }
     
-    return nil;
+    return self;
 }
 
 //设置代理
 -(void)setObuSDKDelegate:(id)object{
-    
+    if (self.gvBleCentralManage != nil) {
+        [self.gvBleCentralManage setObuSDKDelegate:object];
+    }
 }
 
 //判断蓝牙是否打开
 -(Boolean)isEnabledBluetooth{
-    
+    return YES;
 }
 
 //检查设备连接状态
 -(Boolean)checkConnection{
-    
+    return YES;
 }
 
 //绑定设备
 -(Boolean)bindDev:(NSString *)uuid{
-    
+    return YES;
 }
 
 //设备解绑
 -(Boolean)unbindDev{
-    
+    return YES;
 }
 
 //扫描设备，timeout <= 0, 则需调用stopScanDevice接口

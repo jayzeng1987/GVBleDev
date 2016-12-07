@@ -12,7 +12,7 @@
 @interface GVGBBleDevAPI : NSObject
 
 -(void)setObuSDKDelegate:(id)object; //设置代理
--(void)setProtocolType:(GVProtocolType)type; //设置协议类型
+-(void)setProtocolType:(GVProtocolType)type callback:(GVResultBlock)resultBlock; //设置协议类型
 -(Boolean)isEnabledBluetooth; //判断蓝牙是否打开
 -(Boolean)checkConnection; //检查设备连接状态
 -(Boolean)bindDev:(NSString *)uuid; //绑定设备

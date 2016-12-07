@@ -11,6 +11,7 @@
 
 @interface GVGBIndicationStrategy : GVGBTransmitStrategy
 
++(instancetype)shareInstance;
 -(void)transmit:(NSData *)data callback:(GVResultBlock)resultBlock;
 -(void)setMaxFrameLength:(int)length;
 -(void)setBleCommType:(GVBleCommType)type;

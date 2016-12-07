@@ -15,7 +15,7 @@
 		E55B684B1D62F235005FCB81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E55B68491D62F235005FCB81 /* LaunchScreen.storyboard */; };
 		E55B68561D62F235005FCB81 /* GVBleDevDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E55B68551D62F235005FCB81 /* GVBleDevDemoTests.m */; };
 		E55B68611D62F235005FCB81 /* GVBleDevDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E55B68601D62F235005FCB81 /* GVBleDevDemoUITests.m */; };
-		E55B687B1D62F333005FCB81 /* libGVObuSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E55B687A1D62F333005FCB81 /* libGVObuSDK.a */; };
+		E56D3A6A1DF8073900C5974F /* libGVObuSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E56D3A601DF7FC5400C5974F /* libGVObuSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,10 @@
 		E55B685C1D62F235005FCB81 /* GVBleDevDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GVBleDevDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55B68601D62F235005FCB81 /* GVBleDevDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVBleDevDemoUITests.m; sourceTree = "<group>"; };
 		E55B68621D62F235005FCB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E55B687A1D62F333005FCB81 /* libGVObuSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGVObuSDK.a; path = "../Build/Products/Debug-iphonesimulator/libGVObuSDK.a"; sourceTree = "<group>"; };
+		E56D3A5B1DF7F79C00C5974F /* libGVObuSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGVObuSDK.a; path = "../Build/Products/Debug-iphonesimulator/libGVObuSDK.a"; sourceTree = "<group>"; };
+		E56D3A5E1DF7FA7900C5974F /* libGVObuSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGVObuSDK.a; path = ../Build/Products/libGVObuSDK.a; sourceTree = "<group>"; };
+		E56D3A601DF7FC5400C5974F /* libGVObuSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGVObuSDK.a; path = "../Build/Products/Debug-iphoneos/libGVObuSDK.a"; sourceTree = "<group>"; };
+		E56D3A661DF7FEFB00C5974F /* libGVObuSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGVObuSDK.a; path = "../GVObuSDK/build/Debug-iphoneos/libGVObuSDK.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E55B687B1D62F333005FCB81 /* libGVObuSDK.a in Frameworks */,
+				E56D3A6A1DF8073900C5974F /* libGVObuSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,11 +87,11 @@
 		E55B682F1D62F235005FCB81 = {
 			isa = PBXGroup;
 			children = (
-				E55B687A1D62F333005FCB81 /* libGVObuSDK.a */,
 				E55B683A1D62F235005FCB81 /* GVBleDevDemo */,
 				E55B68541D62F235005FCB81 /* GVBleDevDemoTests */,
 				E55B685F1D62F235005FCB81 /* GVBleDevDemoUITests */,
 				E55B68391D62F235005FCB81 /* Products */,
+				E56D3A5A1DF7F79C00C5974F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +145,17 @@
 				E55B68621D62F235005FCB81 /* Info.plist */,
 			);
 			path = GVBleDevDemoUITests;
+			sourceTree = "<group>";
+		};
+		E56D3A5A1DF7F79C00C5974F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E56D3A661DF7FEFB00C5974F /* libGVObuSDK.a */,
+				E56D3A601DF7FC5400C5974F /* libGVObuSDK.a */,
+				E56D3A5E1DF7FA7900C5974F /* libGVObuSDK.a */,
+				E56D3A5B1DF7F79C00C5974F /* libGVObuSDK.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,11 +221,12 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = GV;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = genvict;
 				TargetAttributes = {
 					E55B68371D62F235005FCB81 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = TFACG9W7NW;
 					};
 					E55B68501D62F235005FCB81 = {
 						CreatedOnToolsVersion = 7.3;
@@ -346,8 +361,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -369,9 +386,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -391,8 +410,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -408,8 +429,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -420,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TFACG9W7NW;
 				INFOPLIST_FILE = GVBleDevDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.genvice.jayz.GVBleDevDemo;
@@ -431,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TFACG9W7NW;
 				INFOPLIST_FILE = GVBleDevDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.genvice.jayz.GVBleDevDemo;

@@ -8,6 +8,7 @@
 
 #import "GVGBBleDevAPI.h"
 #import "GVAbstractProtocols.h"
+#import "GVProtocolsFactory.h"
 #import "GVBleDevCtrl.h"
 #import "GVObuSDKDelegate.h"
 
@@ -21,9 +22,9 @@
 
 @implementation GVGBBleDevAPI
 
--(id)init{
+-(instancetype)init{
     if(self = [super init]){
-        self.protocols = [[GVProtocolsFactory shareInstance] create:PROTOCOL_GB];
+        self.protocols = [[GVProtocolsFactory shareInstance] create:PROTOCOL_GB callback:nil];
         self.gvBleDevCtrl = [[GVBleDevCtrl alloc]init];
     }
     
@@ -33,12 +34,14 @@
 //设置代理
 -(void)setObuSDKDelegate:(id)object{
     self.gvObuSDKDelegate = object;
+    if (self.gvBleDevCtrl != nil) {
+        [self.gvBleDevCtrl setObuSDKDelegate:object];
+    }
 }
 
 //设置协议类型
--(void)setProtocolType:(GVProtocolType)type{
-    self.protocols = nil;
-    self.protocols = [[GVProtocolsFactory shareInstance] create:type];
+-(void)setProtocolType:(GVProtocolType)type callback:(GVResultBlock)resultBlock{
+    self.protocols = [[GVProtocolsFactory shareInstance]create:type callback:resultBlock];
 }
 
 //判断蓝牙是否打开
@@ -79,7 +82,7 @@
 -(void)startScanDevice:(int)timeout callback:(GVResultBlock)resultBlock{
     if (self.gvBleDevCtrl != nil) {
         [self.gvBleDevCtrl startScanDevice:timeout callback:resultBlock];
-    }else{
+    }else if(resultBlock != nil){
         GVObuResult * result = [[GVObuResult alloc]init];
         result.status = GVObjectIsNull;
         result.data = nil;

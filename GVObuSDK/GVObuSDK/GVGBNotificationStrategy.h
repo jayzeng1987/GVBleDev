@@ -11,4 +11,6 @@
 
 @interface GVGBNotificationStrategy : GVGBTransmitStrategy
 
++(instancetype)shareInstance;
+
 @end

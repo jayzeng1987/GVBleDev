@@ -8,7 +8,6 @@
 
 #import "GVAbstractProtocols.h"
 
-@class GVAbstractProtocols;
 
 @interface GVGBProtocol : GVAbstractProtocols
 

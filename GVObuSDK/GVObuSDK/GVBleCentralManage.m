@@ -13,6 +13,8 @@
     GVProtocolType _protocolType;
 }
 
+@property(nonatomic, weak)id<GVObuSDKDelegate> gvObuSDKDelegate;
+
 @end
 
 @implementation GVBleCentralManage
@@ -86,6 +88,11 @@ static GVBleCentralManage * instance = nil;
     });
     
     return instance;
+}
+
+#pragma mark 设置代理
+-(void)setObuSDKDelegate:(id)object{
+    self.gvObuSDKDelegate = object;
 }
 
 #pragma mark 扫描设备
